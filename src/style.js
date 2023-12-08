@@ -1,11 +1,11 @@
-const logInButton = {display: 'flex', justifyContent: 'center', alignItems: 'center',  margin: 'auto', marginBottom: '1rem', marginTop: '2rem'};
-const signUpButton = {display: 'flex', justifyContent: 'center', alignItems: 'center'};
-const buttonStyle = {color: 'blue'};
-const signUpStyle = {textDecoration: 'underline'};
-
+const signUpStyle = {textDecoration: 'none'};
+const formHandler = {backgroundColor: "white",
+maxWidth: "300px",
+padding: "20px",
+width: "100%",
+borderRadius: "10px",
+}
 export const styles = {
-	logInButton : logInButton,
-	signUpButton : signUpButton,
-	buttonStyle : buttonStyle,
-	signUpStyle : signUpStyle
+	signUpStyle : signUpStyle,
+    formHandler : formHandler,
 }
