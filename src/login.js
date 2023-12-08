@@ -1,30 +1,48 @@
-import React, {useState} from "react"
 import {styles} from "./style";
-
 export const Login = () => {
-  return (
-  <>
-  <form>
-    <div style={{justifyContent: 'center', marginTop: '10rem', marginBottom: '10rem'}}>
-      <div style={styles.form}>
-        <label form="email"> Email: </label>
-        <input type="email" placeholder="phone number or email" id="email" name="email" />
-      </div>
-      <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center',  margin: 'auto', marginBottom: '1rem', marginTop: '2rem'}}>
-        <label form="password"> Password: </label>
-        <input type="password" placeholder="******" id="password" name="password" />
-      </div>
+    return (
+        <div container style={{backgroundColor: 'dimgray',display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh', width:'100%'}} >
+            <form style={styles.formHandler}>
+                <h3 style={{textAlign:'center',marginBottom:'30px'}}>
+                    Login
+                </h3>
 
-      <div style={styles.logInButton}>
-        <button>Log In </button>
-      </div>
-      <div style={styles.signUpButton}>
-        <button style={styles.buttonStyle}> Already have an account? <a href="#" style={styles.signUpStyle}>Sign up here. </a></button>
-      </div>
-    </div>
-  </form>
-  </>
-  )
+                <div style={{display:'flex',  flexDirection:'column', width:'100%'}}>
+                    <input style={{border:'1px solid', borderRadius:'5px', margin: "10px 0px ", padding:'10px'}}
+                    type="email"
+                    placeholder="Email or Phone Number"
+                    name="email"
+                    required/>
+
+                    <input style={{border:'1px solid', borderRadius:'5px', margin: "10px 0px ", padding:'10px'}}
+                    type="password"
+                    placeholder="Password"
+                    name="password"
+                    required
+                    />
+                
+                    <button style={buttonStyle}>
+                        Log In
+                    </button>
+            
+                    <span style={{textAlign:'center', marginBottom:'20px'}}>
+                        Already have an account?
+                    <a href="#" style={styles.signUpStyle}> Signup </a>
+                    </span>
+            
+            </div>
+            </form>
+        </div>
+
+
+    )
 }
-
-export default Login;
+const buttonStyle = {
+    backgroundColor: "gray",
+    color: "white",
+    padding: "10px",
+    border: "none",
+    borderRadius: "5px",
+    margin: "15px 0px 25px 0px ",
+    cursor: "pointer"
+}
