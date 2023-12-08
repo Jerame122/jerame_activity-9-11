@@ -9,7 +9,7 @@ function App() {
     return (
         <div className="App">
             {
-              currentForm === "Login" ? <Login /> : <Register />
+              currentForm === "Login" ? <Login />
             }
         </div>
     );
